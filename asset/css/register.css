@@ -45,3 +45,22 @@ form {
     color: #2f2f2f;
     font-family: 'Open Sans';
   }
+
+  .btn{
+    float: right;
+    max-width: 70%;
+    padding: 0.5em; 
+  }
+  .btn--green {
+  color: #fff;
+  background-color: #84ad47;
+  }
+  
+  .btn--green:hover {
+  color: #fff;
+  background: #9bc55b;
+  }
+  
+  .btn--radius {
+   border-radius: 100vh;
+  }
