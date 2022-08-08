@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../asset/css/chat.css">
+    <title>Chat</title>
+</head>
+<body>
+    <h1>{{.username}}でログインしています。</h1>
+    <div onclick="location.href='/initial'" class="btn btn--red btn--radius">Back</div>
+    <div onclick="location.href='/logout'" class="btn btn--red btn--radius">Logout</div>
+    <p id="username" hidden>{{.username}}</p>
+    {{ $sender := .username}}
+    {{ $reciever := .targetname}}
+    <div class="root">
+        <ul>
+            {{ range .messages }}
+            {{ if eq .Targetname $sender }}
+            <li class="chat you">
+                <p class="msg">{{.Message}}</p>
+            </li>
+            {{ else }}
+            <li class="chat me">
+                <p class="msg">{{.Message}}</p>
+            </li>
+            {{ end }}
+            {{ end }}
+        </ul>
+        <ul id="messages"></ul>
+    <div><input type="text" id="message" placeholder="Text" required></div>
+    <div onclick="send()" class="btn btn--green btn--radius">Send</div>
+    <!-- <button class="btn" onclick="send()">Send</button> -->
+    </div>
+    <script src="/asset/javascript/chat.js"></script>
+</body>
+</html>

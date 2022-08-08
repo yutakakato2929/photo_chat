@@ -1,0 +1,69 @@
+.Table {
+  width: 50%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  .Table {
+    font-size: 12px;
+  }
+}
+.Table-Head {
+  background: #eee;
+}
+.Table-Head-Row-Cell {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.Table-Body-Row:nth-child(even) {
+  background: #eee;
+}
+.Table-Body-Row-Cell {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.btn{
+  float: right;
+  max-width: 70%;
+  padding: 0.5em; 
+}
+.btn--green {
+color: #fff;
+background-color: #84ad47;
+}
+
+.btn--green:hover {
+    color: #fff;
+    background: #9bc55b;
+}
+.btn--red{
+    background: #ad4747;
+    color: #fff;
+}
+.btn--red:hover {
+  color: #fff;
+  background: #b05959;
+}
+
+.btn--radius {
+ border-radius: 100vh;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+body {
+  padding: 2rem;
+  background: #f9f9f9;
+  color: #2f2f2f;
+  font-family: 'Open Sans';
+}

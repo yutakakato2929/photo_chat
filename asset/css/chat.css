@@ -1,0 +1,79 @@
+.room {
+    width: 400px;      /* チャットルームの幅を指定 */
+    background: #eee;  /* チャットルームの背景を灰色 */
+    padding: 10px;     /* 余白を10pxキープ */
+}
+.chat {
+    display: flex;        /* 要素を横並び */
+    margin-bottom: 10px;  /* チャット同士に隙間を作る */
+}
+.chat .msg {
+    max-width: 70%;       /* 短いチャットにも対応させるため、widthではなくmax-widthを指定 */
+    border-radius: 20px;  /* （あとでも可）角丸を指定 */
+    padding: 0.5em;       /* （あとでも可）メッセージの内側に余白 */
+}
+
+.chat.you .msg{
+    color: #fff;        /* 文字色を白 */
+    background: rgb(58, 58, 58);   /* 背景を黒 */
+}
+
+.chat.me {
+flex-direction: row-reverse;  /* 左右の並び順を逆順にする */
+}
+
+.chat.me .msg{
+background: #84ad47;          /* 背景色を緑 */
+}
+
+input {
+    float: left;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background: #e0e0e0;
+    color: #7a7a7a;
+}
+
+.btn{
+    float: right;
+    max-width: 70%;
+    padding: 0.5em; 
+}
+.btn--green {
+  color: #fff;
+  background-color: #84ad47;
+}
+.btn--red{
+    background: #ad4747;
+    color: #fff;
+}
+.btn--red:hover {
+  color: #fff;
+  background: #b05959;
+}
+
+.btn--green:hover {
+  color: #fff;
+  background: #9bc55b;
+}
+
+.btn--radius {
+   border-radius: 100vh;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+body {
+    padding: 2rem;
+    background: #f9f9f9;
+    color: #2f2f2f;
+    font-family: 'Open Sans';
+}

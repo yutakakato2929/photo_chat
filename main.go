@@ -1,0 +1,21 @@
+package main
+
+import (
+	"net/http"
+	"photo_chat/handler"
+	"photo_chat/websocket"
+)
+
+func main() {
+	http.HandleFunc("/home", handler.HandlerHome)
+	http.HandleFunc("/login", handler.HandlerLogin)
+	http.HandleFunc("/register", handler.HandlerRegister)
+	http.HandleFunc("/insertuser", handler.HandlerInsertuser)
+	http.HandleFunc("/initial", handler.HandlerInitial)
+	http.HandleFunc("/chat/", handler.HandlerChat)
+	http.HandleFunc("/ws/", handler.HandlerWs)
+	http.HandleFunc("/logout", handler.HandlerLogout)
+	http.Handle("/asset/", http.StripPrefix("/asset/", http.FileServer(http.Dir("asset/"))))
+	go websocket.HandleMessages()
+	http.ListenAndServe(":8080", nil)
+}

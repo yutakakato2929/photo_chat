@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../asset/css/initial.css">
+    <title>Initial</title>
+</head>
+<body>
+    <h1>{{.name}}でログインしています。</h1>
+    <table class="Table">
+        <thead class="Table-Head">
+        <tr class="Table-Head-Row">
+            <th class="Table-Head-Row-Cell">ユーザー</th>
+            <th class="Table-Head-Row-Cell"></th>
+        </tr>
+        </thead>
+        <tbody class="Table-Body">
+            {{ range .users }}
+            <tr class="Table-Body-Row">
+                <td class="Table-Body-Row-Cell">{{.Name}}</td>
+                <td><div onclick="location.href='/chat/{{.Name}}'" class="btn btn--green btn--radius">チャットする</div></td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    <div onclick="location.href='/logout'" class="btn btn--red btn--radius">Logout</div>
+</body>
+</html>
