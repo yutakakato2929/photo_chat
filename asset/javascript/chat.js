@@ -2,7 +2,7 @@ var socket = null;
     var targetname = location.pathname.slice(6);
     // サーバーに接続する (一連の処理)
     window.onload = function () {
-    socket = new WebSocket("/ws/" + targetname);
+    socket = new WebSocket("https://photo-name.herokuapp.com/ws/" + targetname);
     console.log('connected at websocket')
     //通信が接続された時に実行される
     socket.onopen = function () {
