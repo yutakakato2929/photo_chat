@@ -51,14 +51,13 @@ body {
   max-width: 70%;
   padding: 0.5em; 
 }
-.btn--green {
-color: #fff;
-background-color: #84ad47;
+.btn--red{
+  background: #ad4747;
+  color: #fff;
 }
-
-.btn--green:hover {
+.btn--red:hover {
 color: #fff;
-background: #9bc55b;
+background: #b05959;
 }
 
 .btn--radius {
