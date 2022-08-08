@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 	"photo_chat/handler"
 	"photo_chat/websocket"
 )
@@ -17,5 +18,5 @@ func main() {
 	http.HandleFunc("/logout", handler.HandlerLogout)
 	http.Handle("/asset/", http.StripPrefix("/asset/", http.FileServer(http.Dir("asset/"))))
 	go websocket.HandleMessages()
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 }
