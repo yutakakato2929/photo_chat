@@ -25,9 +25,9 @@ func HandlerLogin(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		http.Redirect(w, r, "http://localhost:8080/initial", http.StatusSeeOther)
+		http.Redirect(w, r, "/initial", http.StatusSeeOther)
 	} else {
-		http.Redirect(w, r, "http://localhost:8080/home", http.StatusSeeOther)
+		http.Redirect(w, r, "/home", http.StatusSeeOther)
 	}
 
 }

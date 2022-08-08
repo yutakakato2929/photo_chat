@@ -20,9 +20,9 @@ func HandlerInsertuser(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			fmt.Println(err)
 		}
-		http.Redirect(w, r, "http://localhost:8080/home", http.StatusSeeOther)
+		http.Redirect(w, r, "/home", http.StatusSeeOther)
 	} else {
-		http.Redirect(w, r, "http://localhost:8080/register", http.StatusSeeOther)
+		http.Redirect(w, r, "/register", http.StatusSeeOther)
 	}
 
 }
