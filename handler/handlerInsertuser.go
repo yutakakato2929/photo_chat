@@ -26,9 +26,9 @@ func HandlerInsertuser(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/signin?pa=success", http.StatusSeeOther)
 	} else if user_ac.Account == "" {
 		log.Println("come else if")
-		http.Redirect(w, r, "/signup?pa=name", http.StatusOK)
+		http.Redirect(w, r, "/signup?pa=name", http.StatusSeeOther)
 	} else {
 		log.Println("come else")
-		http.Redirect(w, r, "/signup?pa=account", http.StatusOK)
+		http.Redirect(w, r, "/signup?pa=account", http.StatusSeeOther)
 	}
 }
