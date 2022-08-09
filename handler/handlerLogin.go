@@ -16,7 +16,7 @@ func HandlerLogin(w http.ResponseWriter, r *http.Request) {
 	}
 	defer db.Close()
 	hashedPasswd := utility.HashStr(r.FormValue("passwd"), "sha256")
-	user, err := mysql.GetByAccount(r.FormValue("account"), db)
+	user, err := mysql.GetUserByFlag(r.FormValue("account"), "ACCOUNT", db)
 	if hashedPasswd == user.Passwd {
 		session, _ := sessions.Store.Get(r, "user-basic-info")
 		session.Values["userinfo"] = &sessions.Cuser{Name: user.Name, LoginTime: time.Now(), LogoutTime: time.Now()}

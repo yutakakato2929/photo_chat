@@ -72,13 +72,13 @@ func GetUserAll(db *sql.DB) ([]User, error) {
 	return users, nil
 }
 
-func GetByAccount(acc string, db *sql.DB) (User, error) {
+func GetUserByFlag(acc, flag string, db *sql.DB) (User, error) {
 	var user User
-	stmt, err := db.Prepare("SELECT ID,ACCOUNT,NAME,PASSWD,CREATED FROM USER WHERE ACCOUNT = ?")
+	stmt, err := db.Prepare("SELECT ID,ACCOUNT,NAME,PASSWD,CREATED FROM USER WHERE ? = ?")
 	if err != nil {
 		return user, err
 	}
-	rows, err := stmt.Query(acc)
+	rows, err := stmt.Query(flag, acc)
 	if err != nil {
 		return user, err
 	}
