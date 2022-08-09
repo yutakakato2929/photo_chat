@@ -8,9 +8,9 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/home", handler.HandlerHome)
+	http.HandleFunc("/signin", handler.HandlerSignIn)
 	http.HandleFunc("/login", handler.HandlerLogin)
-	http.HandleFunc("/register", handler.HandlerRegister)
+	http.HandleFunc("/signup", handler.HandlerSignUp)
 	http.HandleFunc("/insertuser", handler.HandlerInsertuser)
 	http.HandleFunc("/initial", handler.HandlerInitial)
 	http.HandleFunc("/chat/", handler.HandlerChat)

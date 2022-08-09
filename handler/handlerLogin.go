@@ -27,7 +27,7 @@ func HandlerLogin(w http.ResponseWriter, r *http.Request) {
 		}
 		http.Redirect(w, r, "/initial", http.StatusSeeOther)
 	} else {
-		http.Redirect(w, r, "/home", http.StatusSeeOther)
+		http.Redirect(w, r, "/signin", http.StatusSeeOther)
 	}
 
 }

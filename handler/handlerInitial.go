@@ -12,7 +12,7 @@ func HandlerInitial(w http.ResponseWriter, r *http.Request) {
 	session, _ := sessions.Store.Get(r, "user-basic-info")
 	cuser := session.Values["userinfo"].(*(sessions.Cuser))
 	if cuser == nil {
-		http.Redirect(w, r, "/home", http.StatusSeeOther)
+		http.Redirect(w, r, "/signin", http.StatusSeeOther)
 	}
 	db, err := mysql.Openmysql()
 	if err != nil {
