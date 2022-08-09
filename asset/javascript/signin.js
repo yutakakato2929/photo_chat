@@ -1,4 +1,4 @@
 var query = location.search.slice(4);
-if (query != ""){
-    alert(query)
+if (query == "success"){
+    alert("Succeed Sign Up!")
 }
