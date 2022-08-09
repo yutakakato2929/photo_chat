@@ -23,43 +23,27 @@ input[type=submit] {
 input::placeholder {
   color: #7a7a7a;
 }
-input.error {
-  background: #ad4747;
-  color: #fff;
-}
-input.error::placeholder {
-  color: #000;
-}
 * {
   box-sizing: border-box;
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
 body {
   padding: 2rem;
   background: #f9f9f9;
   color: #2f2f2f;
-  font-family: 'Open Sans';
+  /*font-family: 'Open Sans';*/
 }
 
 .btn{
   float: right;
   max-width: 70%;
-  padding: 0.5em; 
+  padding: 0.5em;
+  border-radius: 100vh;
 }
 .btn--red{
   background: #ad4747;
   color: #fff;
 }
 .btn--red:hover {
-color: #fff;
-background: #b05959;
-}
-
-.btn--radius {
- border-radius: 100vh;
+  color: #fff;
+  background: #b05959;
 }

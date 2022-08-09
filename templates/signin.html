@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../asset/css/signin.css">
+    <link rel="stylesheet" type="text/css" href="../asset/css/sign.css">
     <title>Sign In</title>
 </head>
 <body>
-    <h1>Sign In</h1>
-    <div onclick="location.href='/signup'" class="btn btn--red btn--radius">Go to Sign Up Page</div>
+    <div>
+        <h1>Sign In</h1>
+        <div onclick="location.href='/signup'" class="btn btn--red btn--radius">Go to Sign Up Page</div>
+    </div>
     <form action="/login" method="GET">
         <input type="text" placeholder="Account Name" name="account" required>
         <input type="password" placeholder="Password" name="passwd" required>
