@@ -1,4 +1,4 @@
 var query = location.search.slice(4);
-if (query != nil){
+if (query != ""){
     alert(query)
 }
